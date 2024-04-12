@@ -5,7 +5,7 @@ import intuit.com.web.persistance.models.Player;
 import java.util.List;
 
 public interface IPlayersRepositoryService {
-    void saveAllPlayers(Iterable<Player> players);
+    void saveAllPlayers(List<Player> players);
     Player getPlayerById(String id);
     List<Player> getAllPlayers();
 }

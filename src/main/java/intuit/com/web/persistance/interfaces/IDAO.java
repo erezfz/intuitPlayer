@@ -1,8 +1,12 @@
 package intuit.com.web.persistance.interfaces;
 
+import intuit.com.exceptions.IntuitDAOException;
+
+import java.util.List;
+
 public interface IDAO<T> {
-    void AddAllEntities(Iterable<T> entities);
-    Iterable<T> getEntities();
-    String AddEntity(T entity);
+    void AddAllEntities(List<T> entities) throws IntuitDAOException;
+    List<T> getEntities();
+    String AddEntity(T entity) throws IntuitDAOException;
     T getEntityByID(String id);
 }

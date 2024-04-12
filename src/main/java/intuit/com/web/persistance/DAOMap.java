@@ -1,11 +1,16 @@
 package intuit.com.web.persistance;
 
+import intuit.com.exceptions.IntuitDAOException;
 import intuit.com.web.persistance.interfaces.IDAO;
 import intuit.com.web.persistance.models.Player;
+import lombok.NonNull;
 import lombok.SneakyThrows;
 
+import javax.swing.text.html.Option;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.StreamSupport;
 
 public class DAOMap implements IDAO<Player> {
@@ -24,25 +29,30 @@ public class DAOMap implements IDAO<Player> {
         return instance;
     }
 
-    @SneakyThrows
     @Override
-    public void AddAllEntities(Iterable<Player> entities) {
-        StreamSupport.stream(entities.spliterator(), false).forEach(this::AddEntity);
+    public void AddAllEntities(List<Player> entities){
+        Map<String, Player> intermidiateMap = new HashMap<>();
+        entities.parallelStream().forEach(entity -> intermidiateMap.put(entity.getPlayerID(), entity));
+        this.persistence.putAll(intermidiateMap);
     }
 
     @Override
-    public Iterable<Player> getEntities() {
-        return this.persistence.values();
+    public List<Player> getEntities() {
+        return this.persistence.values().stream().toList();
     }
 
     @Override
-    public String AddEntity(Player entity) {
-        this.persistence.put(entity.getPlayerID(), entity);
+    public String AddEntity(@NonNull Player entity) throws IntuitDAOException {
+        if (entity.getPlayerID() == null){
+            throw new IntuitDAOException(String.format("provided player id is null. Player is: %s", entity.toString()));
+        }
+        persistence.put(entity.getPlayerID(), entity);
         return this.getEntityByID(entity.getPlayerID()).getPlayerID();
     }
 
     @Override
-    public Player getEntityByID(String id) {
+
+    public Player getEntityByID(@NonNull String id) {
         return this.persistence.get(id);
     }
 }
