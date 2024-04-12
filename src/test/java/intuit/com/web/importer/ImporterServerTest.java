@@ -4,7 +4,6 @@ import intuit.com.AppConfig;
 import intuit.com.web.importer.utils.PlayerFileReader;
 import intuit.com.web.persistance.DAOMap;
 import intuit.com.web.persistance.PlayersRepositoryServiceMapImpl;
-import intuit.com.web.persistance.interfaces.IDAO;
 import intuit.com.web.persistance.models.Player;
 import org.apache.commons.lang3.SerializationUtils;
 import org.junit.jupiter.api.BeforeAll;
@@ -39,7 +38,6 @@ public class ImporterServerTest {
     @BeforeAll
     static void setUp() throws IOException, URISyntaxException {
         Properties propertiesMock = mock(Properties.class);
-        DAOMap playersDAOMock = mock(DAOMap.class);
         try (MockedStatic<AppConfig> mockedStatic = mockStatic(AppConfig.class)){
             when(propertiesMock.getProperty("data.file.players.name")).thenReturn("fixture.csv");
             mockedStatic.when(AppConfig::getProperties).thenReturn(propertiesMock);
