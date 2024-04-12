@@ -1,0 +1,11 @@
+playerID,birthYear,birthMonth,birthDay,birthCountry,birthState,birthCity,deathYear,deathMonth,deathDay,deathCountry,deathState,deathCity,nameFirst,nameLast,nameGiven,weight,height,bats,throws,debut,finalGame,retroID,bbrefID
+abbotod01,1886,9,5,USA,PA,New Eagle,1933,4,13,USA,DC,Washington,Ody,Abbott,Ody Cleon,165,69,L,R,1910-09-10,1910-10-15,abboo101,abbotod01
+abbotpa01,1967,9,15,USA,CA,Van Nuys,,,,,,,Paul,Abbott,Paul David,185,75,R,R,1990-08-21,2004-08-07,abbop001,abbotpa01
+aberal01,1927,7,31,USA,OH,Cleveland,1993,5,20,USA,OH,Garfield Heights,Al,Aber,Albert Julius,195,74,L,L,1950-09-15,1957-09-11,abera101,aberal01
+abercda01,1850,1,2,USA,OK,Fort Towson,1939,11,11,USA,PA,Philadelphia,Frank,Abercrombie,Francis Patterson,,,,,1871-10-21,1871-10-21,aberd101,abercda01
+abercre01,1980,7,15,USA,GA,Columbus,,,,,,,Reggie,Abercrombie,Reginald Damascus,215,75,R,R,2006-04-04,2008-09-28,aberr001,abercre01
+abernbi01,1929,1,30,USA,CA,Torrance,2006,2,19,USA,CA,Yucaipa,Bill,Abernathie,William Edward,190,70,R,R,1952-09-27,1952-09-27,aberb101,abernbi01
+abernbr01,1977,9,23,USA,GA,Atlanta,,,,,,,Brent,Abernathy,Michael Brent,185,73,R,R,2001-06-25,2005-09-29,aberb001,abernbr01
+abernte01,1921,10,30,USA,NC,Bynum,2001,11,16,USA,NC,Charlotte,Ted,Abernathy,Talmadge Lafayette,210,74,R,L,1942-09-19,1944-04-29,abert102,abernte01
+abernte02,1933,3,6,USA,NC,Stanley,2004,12,16,USA,NC,Gastonia,Ted,Abernathy,Theodore Wade,215,76,R,R,1955-04-13,1972-09-30,abert101,abernte02
+abernwo01,1915,2,1,USA,NC,Forest City,1994,12,5,USA,KY,Louisville,Woody,Abernathy,Virgil Woodrow,170,72,L,L,1946-07-28,1947-04-17,aberw101,abernwo01
