@@ -9,7 +9,5 @@ COPY ./target/intuitErez.jar /app/intuitErez.jar
 
 LABEL authors="erez fiengertz"
 
-EXPOSE 8090
-
 CMD ["java", "-jar", "intuitErez.jar"]
 #ENTRYPOINT ["top", "-b"]
