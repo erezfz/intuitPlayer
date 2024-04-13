@@ -43,16 +43,16 @@ Summery
 
 Additions with infinite time
 ---
-* **Deployment & DevOps**
-  * add docker compose (for placing resources in volume and DB), or setting K8 related configuration
-* **Performance**
+* Performance
   * Add pagination
     * import data - paginating and restrict the amount of data sent in different layers (repository service, dao) when adding data
     * /api/players end point - add paging support (e.g: /api/players/{page_id}, add api to get pages numbers)
     * not allow /api/players will not return all data but part of it (chunk)
-* **Persistence**
+* Persistence
   * add mySQL or sqlite DAO, and use it in the app.
-* **Configuration**
+* Deployment & DevOps
+  * add docker compose (for placing resources in volume and DB), or setting K8 related configuration
+* Configuration
   * Add framework providing dependency-injection (e.g spring); especially usefull for class members configuration and better testing.
   * ability to configure the functionality and server bootstrap from outside the app - via K8 and helm artifacts (configMaps, values files) and env variables.
 * improve test coverage
