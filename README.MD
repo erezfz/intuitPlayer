@@ -58,7 +58,10 @@ Additions with infinite time
 * improve test coverage
 * Objects Mapping
   * use 3d-party MapStruct as standard to produce the mapping between players 'raw-data' and player class, between player to json
-* Add validations
+* Add functional validations
+* Use a robust framework to construct and run the App - like springboot
+  * use of better mapping mechanism - with imperative annotation to do uri validation and extractions
+  * support for pagination, security, persistance APIs
 * Add robust CI/CD
 * Add more checked exceptions types
 * Add AOP support (aspect-oriented programing) for exception handling

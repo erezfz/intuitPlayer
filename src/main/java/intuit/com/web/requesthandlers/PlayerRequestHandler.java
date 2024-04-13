@@ -2,7 +2,6 @@ package intuit.com.web.requesthandlers;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import intuit.com.exceptions.IntuitValidationException;
 import intuit.com.web.Mappers.PlayerToJsonMapper;
 import intuit.com.web.persistance.models.Player;
 import intuit.com.web.requesthandlers.interfaces.RequestValidator;
