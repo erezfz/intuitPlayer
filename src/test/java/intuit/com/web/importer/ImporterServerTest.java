@@ -2,7 +2,6 @@ package intuit.com.web.importer;
 
 import intuit.com.AppConfig;
 import intuit.com.web.importer.utils.PlayerFileReader;
-import intuit.com.web.persistance.DAOMap;
 import intuit.com.web.persistance.PlayersRepositoryServiceMapImpl;
 import intuit.com.web.persistance.models.Player;
 import org.apache.commons.lang3.SerializationUtils;

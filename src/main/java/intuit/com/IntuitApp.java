@@ -10,19 +10,13 @@ import java.util.Properties;
 public class IntuitApp {
 
     public static void main(String[] args) {
-        try {
-            final Properties properties = AppConfig.getProperties();
-            initAppConfiguration();
-            startApp();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        initAppConfiguration();
+        startApp();
     }
 
     private static void initAppConfiguration() throws RuntimeException {
         try {
             ServerNetworkConfiguration.getServerNetworkConfiguration();
-
         } catch( IOException e) {
             throw new RuntimeException(e);
         }

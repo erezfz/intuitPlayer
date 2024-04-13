@@ -52,12 +52,16 @@ public class PlayerRequestHandler implements HttpHandler, RequestValidator {
 
     @Override
     public void validate() throws RuntimeException {
-        final String playerID = this.httpExchange.getRequestURI().toString().substring("/api/players/".length());
+        final String playerID = this.getPlayerID();
         if (playerID.isEmpty()) {
             throw new RuntimeException("Player ID is empty");
         }
         if (playerID.contains("/")) {
             throw new RuntimeException("Player ID provided contains invalid characters");
         }
+    }
+
+    public String getPlayerID() {
+        return this.httpExchange.getRequestURI().toString().substring("/api/players/".length());
     }
 }
