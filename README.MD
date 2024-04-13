@@ -7,7 +7,8 @@ via dedicated REST end-points.
 
 Run The Application
 ---
-The app is running on port 8090 (e.g http://localhost:8090)  
+**The app is running on port 8090 (e.g http://localhost:8090)**
+
 * **Options**
   * jar sent in the replay mail
     * Prerequisite: java 21.
@@ -21,7 +22,7 @@ The app is running on port 8090 (e.g http://localhost:8090)
     * Prerequisite: Docker engine and client (e.g DockerDesktop).
     * Run:
       * command (build the image): docker build -t intuitplayer . <br> in the project home directory
-      * start a container from the image. It automatically starts the App inside the docker on port 8090
+      * start a container from the image. It automatically starts the App inside the docker on port 8090. Enter the docker by exec command and run REST requests from inside
 
 Summery
 ---
@@ -67,4 +68,5 @@ Additions with infinite time
 * Add AOP support (aspect-oriented programing) for exception handling
   * handle all exceptions in a single location (when applicalbe), and not in every method that has to deal with exceptions
   * use @AspectJ 
+* communication with REST requests from outside the container (DOCKER EXPOSE command)
 
